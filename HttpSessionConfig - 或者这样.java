@@ -21,11 +21,6 @@ public class HttpSessionConfig {
          CookieHttpSessionStrategy strategy = new CookieHttpSessionStrategy();  
          DefaultCookieSerializer cookieSerializer = new DefaultCookieSerializer(); 
          cookieSerializer.setCookiePath("/");
-         cookieSerializer.setUseSecureCookie(true);
-         cookieSerializer.setUseHttpOnlyCookie(true);
-         cookieSerializer.setUseBase64Encoding(true);
-         cookieSerializer.setDomainName("www.springsession.com");
-         cookieSerializer.setCookieMaxAge(1000*60*8);
          strategy.setCookieSerializer(cookieSerializer);  
          return strategy;  
      }  
